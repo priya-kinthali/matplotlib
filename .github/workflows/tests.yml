@@ -358,7 +358,28 @@ jobs:
         run: |
           rm -rf ~/.cache/matplotlib
         if: matrix.delete-font-cache
-
+      - name: Verify Python Tk Version
+        run: |
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file
+        run: |
+          python embedding_in_tk_sgskip.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file
+        run: |
+          python mplcvd.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file
+        run: |
+          python cbook.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file
+        run: |
+          python _backend_tk.py.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Verify Python Tk Version
+        run: |
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run pytest
         run: |
           if [[ "${{ matrix.python-version }}" == '3.13t' ]]; then
