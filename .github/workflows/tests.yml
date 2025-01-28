@@ -370,17 +370,17 @@ jobs:
       # - name: Run tkinter file2
       #   if: runner.os != 'Linux'
       #   run: |
-      #     python mplcvd.py
+      #     python galleries/examples/user_interfaces/mplcvd.py
       #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file3
         if: runner.os != 'Linux'
         run: |
-          python cbook.py
+          python lib/matplotlib/cbook.py
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file4
         if: runner.os != 'Linux'
         run: |
-          python _backend_tk.py.py
+          python backends/_backend_tk.py
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Verify Python Tk Version
         run: |
