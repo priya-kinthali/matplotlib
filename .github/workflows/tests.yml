@@ -364,7 +364,7 @@ jobs:
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file
         run: |
-          python embedding_in_tk_sgskip.py
+          python galleries/examples/user_interfaces/embedding_in_tk_sgskip.py
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file
         run: |
