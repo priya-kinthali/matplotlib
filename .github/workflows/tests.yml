@@ -372,26 +372,26 @@ jobs:
       #   run: |
       #     python galleries/examples/user_interfaces/mplcvd.py
       #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      - name: Run tkinter file3
-        if: runner.os != 'Linux'
-        run: |
-          python lib/matplotlib/cbook.py
-          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      - name: Run tkinter file4
-        if: runner.os != 'Linux'
-        run: |
-          python lib/matplotlib/backends/_backend_tk.py
-          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      - name: Run tkinter file5
-        if: runner.os != 'Linux'
-        run: |
-          python lib/matplotlib/tests/test_rcparams.py
-          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      - name: Run tkinter file6
-        if: runner.os != 'Linux'
-        run: |
-          python lib/matplotlib/tests/test_backend_tk.py
-          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      # - name: Run tkinter file3
+      #   if: runner.os != 'Linux'
+      #   run: |
+      #     python lib/matplotlib/cbook.py
+      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      # - name: Run tkinter file4
+      #   if: runner.os != 'Linux'
+      #   run: |
+      #     python lib/matplotlib/backends/_backend_tk.py
+      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      # - name: Run tkinter file5
+      #   if: runner.os != 'Linux'
+      #   run: |
+      #     python lib/matplotlib/tests/test_rcparams.py
+      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      # - name: Run tkinter file6
+      #   if: runner.os != 'Linux'
+      #   run: |
+      #     python lib/matplotlib/tests/test_backend_tk.py
+      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file7
         if: runner.os != 'Linux'
         run: |
