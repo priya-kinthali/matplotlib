@@ -362,16 +362,16 @@ jobs:
       - name: Verify Python Tk Version
         run: |
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      # - name: Run tkinter file1
-      #   if: runner.os != 'Linux'
-      #   run: |
-      #     python galleries/examples/user_interfaces/embedding_in_tk_sgskip.py
-      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
-      # - name: Run tkinter file2
-      #   if: runner.os != 'Linux'
-      #   run: |
-      #     python galleries/examples/user_interfaces/mplcvd.py
-      #     python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file1
+        if: runner.os != 'Linux'
+        run: |
+          python galleries/examples/user_interfaces/embedding_in_tk_sgskip.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file2
+        if: runner.os != 'Linux'
+        run: |
+          python galleries/examples/user_interfaces/mplcvd.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Run tkinter file3
         if: runner.os != 'Linux'
         run: |
@@ -380,7 +380,22 @@ jobs:
       - name: Run tkinter file4
         if: runner.os != 'Linux'
         run: |
-          python backends/_backend_tk.py
+          python lib/matplotlib/backends/_backend_tk.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file5
+        if: runner.os != 'Linux'
+        run: |
+          python lib/matplotlib/tests/test_rcparams.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file6
+        if: runner.os != 'Linux'
+        run: |
+          python lib/matplotlib/tests/test_backend_tk.py
+          python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
+      - name: Run tkinter file7
+        if: runner.os != 'Linux'
+        run: |
+          python lib/matplotlib/tests/test_backends_interactive.py
           python -c "import tkinter; print(f'Tkinter TkVersion: {tkinter.TkVersion}')"
       - name: Verify Python Tk Version
         run: |
